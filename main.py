@@ -12,12 +12,12 @@ def start(store: Store):
         choice = input("Enter your choice (1-4): ")
 
         if choice == "1":
-            print("\nAvailable Products:")
+            print("Available Products:")
             for idx, product in enumerate(store.get_all_products(), start=1):
                 print(f"{idx}. {product.show()}")
 
         elif choice == "2":
-            print(f"\nTotal quantity in store: {store.get_total_quantity()}")
+            print(f"Total quantity in store: {store.get_total_quantity()}")
 
         elif choice == "3":
             shopping_list = []

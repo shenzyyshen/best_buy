@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from products import Product  # Assuming your Product class is in products.py
+from products import Product
 
 class Store:
     def __init__(self, products: List[Product]):
@@ -25,7 +25,6 @@ class Store:
         return total
 
 
-# Only run when executing this file directly
 if __name__ == "__main__":
     product_list = [
         Product("MacBook Air M2", price=1450, quantity=100),
@@ -40,8 +39,6 @@ if __name__ == "__main__":
     cost = best_buy.order([(products[0], 1), (products[1], 2)])
     print(f"Order cost: {cost} dollars.")
 
-    for p in best_buy.get_all_products():
-        print(p.show())
 
 
 
