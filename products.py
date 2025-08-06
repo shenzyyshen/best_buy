@@ -21,6 +21,8 @@ class Product:
         self.quantity = quantity
         if self.quantity == 0:
             self.deactivate()
+        else:
+            self.activate()
 
     def is_active(self) -> bool:
         return self.active
@@ -32,7 +34,7 @@ class Product:
         self.active = False
 
     def show(self):
-        print(f"{self.name}, Price: {self.price}, Quantity: {self.quantity}")
+        return f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
 
     def buy(self, quantity) -> float:
         if not self.active:
